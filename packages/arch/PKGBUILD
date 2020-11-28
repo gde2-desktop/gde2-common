@@ -1,0 +1,26 @@
+# Maintainer: Brad Fanella <cesura@archlinux.org>
+# Contributor: Martin Wimpress <code@flexion.org>
+
+pkgname=gde2-common
+pkgver=1.0
+pkgrel=1
+pkgdesc="Common development macros for GnuDE2"
+arch=('any')
+license=('GPL')
+depends=('autoconf' 'automake' 'gettext' 'gtk-doc' 'libtool'
+         'pkg-config')
+url="https://mate-desktop.org"
+source=("https://github.com/gde2-desktop/gde2-common/archive/master.tar.gz")
+sha256sums=('SKIP')
+
+build() {
+	cd "${pkgname}-master"
+    	./autogen.sh \
+        	--prefix=/usr
+    	make
+}
+
+package() {
+    	cd "${pkgname}-master"
+    	make DESTDIR="${pkgdir}" install
+}
