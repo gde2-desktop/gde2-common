@@ -1,10 +1,10 @@
 NAME
-  mate-doc-common - include the standard user documentation build files
+  gde2-doc-common - include the standard user documentation build files
 SYNOPSIS
-  mate-doc-common
+  gde2-doc-common
 DESCRIPTION
-  This script is used by mate-autogen to include the standard user
-  documentation build files in a MATE package.
+  This script is used by gde2-autogen to include the standard user
+  documentation build files in a GDE2 package.
   
   To automatically include the standard user documentation build files (omf.make
   and xmldocs.make) in you package, set USE_COMMON_DOC_BUILD=yes in autogen.sh
@@ -19,6 +19,6 @@ OPTIONS
   --version   Show the script version.
   --copy      Copy files instead of make symlinks.
 SEE ALSO
-  mate-autogen(1)
+  gde2-autogen(1)
 AUTHOR
   Perberos <perberos@gmail.com>

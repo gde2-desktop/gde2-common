@@ -1,4 +1,4 @@
-# MATE_COMPILE_WARNINGS
+# GDE2_COMPILE_WARNINGS
 # Turn on many useful compiler warnings
 # For now, only works on GCC
 #
@@ -18,7 +18,7 @@
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-AC_DEFUN([MATE_COMPILE_WARNINGS],[
+AC_DEFUN([GDE2_COMPILE_WARNINGS],[
     dnl ******************************
     dnl More compiler warnings
     dnl ******************************
@@ -104,7 +104,7 @@ AC_DEFUN([MATE_COMPILE_WARNINGS],[
 
 dnl For C++, do basically the same thing.
 
-AC_DEFUN([MATE_CXX_WARNINGS],[
+AC_DEFUN([GDE2_CXX_WARNINGS],[
   AC_ARG_ENABLE(cxx-warnings,
                 AS_HELP_STRING([--enable-cxx-warnings=@<:@no/minimum/yes@:>@]
                                [Turn on compiler warnings.]),,

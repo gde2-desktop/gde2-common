@@ -4,17 +4,17 @@ if [ -x /usr/bin/txt2man ]; then
 
 	txt2man \
 		-d "`date -R`" \
-		-P mate-autogen \
-		-t mate-autogen \
+		-P gde2-autogen \
+		-t gde2-autogen \
 		-s 1 \
-		mate-autogen.txt > mate-autogen.1
+		gde2-autogen.txt > gde2-autogen.1
 
 	txt2man \
 		-d "`date -R`" \
-		-P mate-doc-common \
-		-t mate-doc-common \
+		-P gde2-doc-common \
+		-t gde2-doc-common \
 		-s 1 \
-		mate-doc-common.txt > mate-doc-common.1
+		gde2-doc-common.txt > gde2-doc-common.1
 
 else
 

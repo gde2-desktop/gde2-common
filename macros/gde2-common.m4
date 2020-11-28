@@ -1,4 +1,4 @@
-# mate-common.m4
+# gde2-common.m4
 #
 #   Copyright (C) 2011 Perberos <perberos@gmail.com>
 #
@@ -15,9 +15,9 @@
 #   You should have received a copy of the GNU General Public License
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-dnl MATE_COMMON_INIT
+dnl GDE2_COMMON_INIT
 
-AC_DEFUN([MATE_COMMON_INIT],
+AC_DEFUN([GDE2_COMMON_INIT],
 [
   dnl this macro should come after AC_CONFIG_MACRO_DIR
   AC_BEFORE([AC_CONFIG_MACRO_DIR], [$0])
@@ -32,7 +32,7 @@ AC_DEFUN([MATE_COMMON_INIT],
   AC_SUBST([ACLOCAL_AMFLAGS])
 ])
 
-AC_DEFUN([MATE_DEBUG_CHECK],
+AC_DEFUN([GDE2_DEBUG_CHECK],
 [
 	AC_ARG_ENABLE([debug],
                       AS_HELP_STRING([--enable-debug],
@@ -40,21 +40,21 @@ AC_DEFUN([MATE_DEBUG_CHECK],
                       [enable_debug=no])
 
 	if test x$enable_debug = xyes ; then
-	    AC_DEFINE(MATE_ENABLE_DEBUG, 1,
+	    AC_DEFINE(GDE2_ENABLE_DEBUG, 1,
 		[Enable additional debugging at the expense of performance and size])
 	fi
 ])
 
-dnl MATE_MAINTAINER_MODE_DEFINES ()
+dnl GDE2_MAINTAINER_MODE_DEFINES ()
 dnl define DISABLE_DEPRECATED
 dnl
-AC_DEFUN([MATE_MAINTAINER_MODE_DEFINES],
+AC_DEFUN([GDE2_MAINTAINER_MODE_DEFINES],
 [
 	AC_REQUIRE([AM_MAINTAINER_MODE])
 
 	DISABLE_DEPRECATED=""
 	if test $USE_MAINTAINER_MODE = yes; then
-	        DOMAINS="G ATK PANGO GDK GDK_PIXBUF GTK MATE LIBGLADE VTE WNCK LIBSOUP"
+	        DOMAINS="G ATK PANGO GDK GDK_PIXBUF GTK GDE2 LIBGLADE VTE WNCK LIBSOUP"
 	        for DOMAIN in $DOMAINS; do
 	               DISABLE_DEPRECATED="$DISABLE_DEPRECATED -D${DOMAIN}_DISABLE_DEPRECATED -D${DOMAIN}_DISABLE_SINGLE_INCLUDES"
 	        done

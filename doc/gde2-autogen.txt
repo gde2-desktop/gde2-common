@@ -1,0 +1,14 @@
+NAME
+  gde2-autogen - generates all makefiles for GDE2 packages
+SYNOPSIS
+  gde2-autogen
+DESCRIPTION
+  gde2-autogen generates all makefiles for GDE2 packages
+  
+  To make use of the common autogen script, create a stub autogen.sh
+  script in your module. Take the example in
+  autogen.sh.example file in gde2-common documentation folder
+SEE ALSO
+  autoconf(1), automake(1), autoreconf(1), gde2-doc-common(1)
+AUTHOR
+  Perberos <perberos@gmail.com>
