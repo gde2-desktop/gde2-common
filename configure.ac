@@ -1,5 +1,5 @@
 AC_PREREQ(2.54)
-AC_INIT([gde2-common], [1.16.0], [https://github.com/gde2-desktop/gde2-common])
+AC_INIT([gde2-common], [1.1.0], [https://github.com/gde2-desktop/gde2-common])
 
 AC_CONFIG_SRCDIR([macros/gde2-autogen])
 
